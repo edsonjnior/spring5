@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 
+import java.io.Serializable;
 import java.util.Set;
 
 import static javax.persistence.GenerationType.AUTO;
@@ -14,7 +15,7 @@ import static javax.persistence.GenerationType.AUTO;
 @Entity
 @Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class Author {
+public class Author implements Serializable {
 
     @Id
     @GeneratedValue(strategy = AUTO)

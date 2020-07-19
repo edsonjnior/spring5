@@ -4,6 +4,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -12,10 +13,11 @@ import static javax.persistence.GenerationType.AUTO;
 @Entity
 @Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class Book {
+public class Book implements Serializable {
 
     @Id
     @GeneratedValue(strategy = AUTO)
+    @EqualsAndHashCode.Include
     private Long id;
 
     private String title;
