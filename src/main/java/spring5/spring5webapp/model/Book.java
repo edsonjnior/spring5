@@ -35,6 +35,9 @@ public class Book implements Serializable {
     )
     private Set<Author> authors = new HashSet<>();
 
+    public Book() {
+    }
+
     public Book(String title, String isbn, Publisher publisher) {
         this.title = title;
         this.isbn = isbn;

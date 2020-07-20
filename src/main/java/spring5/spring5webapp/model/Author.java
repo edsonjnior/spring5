@@ -29,6 +29,9 @@ public class Author implements Serializable {
     @ManyToMany(mappedBy = "authors")
     private Set<Book> books;
 
+    public Author() {
+    }
+
     public Author(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
